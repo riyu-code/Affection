@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebcd;
+            text-align: center;
+            padding: 50px;
+        }
+        #login, #loveInterface {
+            display: none;
+        }
+        #loveInterface {
+            background-color: #ff69b4;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login">
+        <h1>Welcome</h1>
+        <input type="email" id="email" placeholder="Enter your email" required><br><br>
+        <input type="password" id="password" placeholder="Enter MY NICKNAME" required><br><br>
+        <button onclick="authenticate()">Login</button>
+        <p id="errorMessage" style="color:red;"></p>
+    </div>
+
+    <div id="loveInterface">
+        <h2>HELLO, Welcome dear</h2>
+        <button onclick="showSorryMessage()">Click me please</button>
+    </div>
+
+    <script>
+        const correctPassword = 'Janam'; // Set your password here
+
+        // Show the login interface
+        document.getElementById('login').style.display = 'block';
+
+        function authenticate() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (password === correctPassword) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('loveInterface').style.display = 'block';
+            } else {
+                document.getElementById('errorMessage').innerText = 'Incorrect password. Please try again.';
+            }
+        }
+
+        function showSorryMessage() {
+            alert('Sorry! My Love. I’m really sorry. I feel like I’ve failed as ur girlfriend because I haven’t been able to fulfill my commitments. I think its my mistake because I promised you I would. I want to make things right, no matter what it takes. Please forgive me once again. 💔');
+        }
+    </script>
+
+</body>
+</html>
